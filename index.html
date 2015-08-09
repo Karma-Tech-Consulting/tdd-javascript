@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta name="generator" content="PhpED 14.0 (Build 14027, 64bit)">
+<title></title>
+<link rel="stylesheet"  href="node_modules/mocha/mocha.css">
+<script type="text/javascript" src="node_modules/mocha/mocha.js"></script>
+<script type="text/javascript" src="node_modules/chai/chai.js"></script>
+<script type="text/javascript" src="node_modules/chai-jquery/chai-jquery.js"></script>
+</head>
+<body>
+<!-- Regular HTML document here. -->
+
+<!-- Mocha test output. -->
+<div id="mocha"></div>
+<script type="text/javascript">
+// Configure Mocha, telling both it and chai to use BDD-style tests. 
+mocha.setup("bdd");
+chai.should();
+
+var timesTwo = function(input){
+    return input + 2;
+};
+
+var test = "first tests";
+describe('Simple '  + test, function(){
+    it('true = true?', function(){
+        var j = true;
+        var i = true;
+        i.should.equal(j);
+    });
+    it('2 X 2 = 4', function(){
+        var Two = 2;
+        var Four = 4;
+        timesTwo(Two).should.equal(Four);
+    });
+    it('3 X 2 = 6', function(){
+        var Three = 3;
+        var Six = 6;
+        timesTwo(Three).should.equal(Six);
+    });
+});
+// Run all our test suites.  Only necessary in the browser.
+mocha.run();
+</script>
+</body>
+</html>
